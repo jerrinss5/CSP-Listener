@@ -77,4 +77,5 @@ http://localhost:9000/health
 Add this line to say an nginx config pointing to the endpoint hosting the CSP listener
 
 add_header Content-Security-Policy "script-src 'self';";
+
 add_header Content-Security-Policy-Report-Only "script-src 'self'; report-uri http://localhost:9000/report";
