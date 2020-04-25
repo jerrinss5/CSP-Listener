@@ -71,3 +71,10 @@ http://localhost:9000/report
 Send a GET request to /health endpoint to get a 204 (Status - No Content)
 
 http://localhost:9000/health
+
+## To test with an implementation
+
+Add this line to say an nginx config pointing to the endpoint hosting the CSP listener
+
+add_header Content-Security-Policy "script-src 'self';";
+add_header Content-Security-Policy-Report-Only "script-src 'self'; report-uri http://localhost:9000/report";
